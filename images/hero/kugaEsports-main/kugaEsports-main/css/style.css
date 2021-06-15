@@ -1,0 +1,512 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.7;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  background-color: #222831;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Navegador Princial */
+
+header {
+  display: block;
+  z-index: 1999;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navBar {
+  display: flex !important;
+  align-items: center !important;
+  -webkit-box-align: center !important;
+}
+
+.logo {
+  position: relative;
+  font-weight: 900;
+  font-size: 2.3rem;
+  transition: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.logoLink {
+  text-decoration: none !important;
+  color: rgb(255, 255, 255);
+}
+
+.logoLink:hover {
+  color: #fd680e;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.mlAuto {
+  margin-left: auto !important;
+}
+
+.mrAuto {
+  margin-right: auto !important;
+}
+
+nav {
+  text-align: right !important;
+  position: relative !important;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block !important;
+  margin-right: auto !important;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.navLi {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+a {
+  transition: 0.3s all ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navLink {
+  display: inline-block;
+  position: relative;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+.navLinks {
+  display: inline-block;
+  position: relative;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+
+.navLink::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* Sección Heroe */
+
+.hero {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero.overlay::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.row {
+  height: 100vh;
+  min-height: 500px;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  margin-left: auto !important;
+  -webkit-box-flex: 0;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #fff !important;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  cursor: context-menu;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  cursor: context-menu;
+}
+
+.boton {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  margin-right: 1rem !important;
+  color: #fff;
+  background-color: #fd680e;
+  border-color: #fd680e;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.boton:hover {
+  background-color: #fd6a0e00;
+  border-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+.sinFondo {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Sección Torneos */
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+  line-height: 1.7;
+  color: gray;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.col2 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.teamVs {
+  background-color: #fd680e;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -90px;
+  position: relative;
+  box-shadow: 0 15px 30px 0 rgb(0 0 0 / 10%);
+  display: flex !important;
+}
+
+.puntaje {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 2;
+  letter-spacing: 0.2em;
+}
+
+.team1 {
+  padding: 30px;
+  width: 50% !important;
+  box-sizing: border-box;
+}
+.team2 {
+  padding: 30px;
+  width: 50% !important;
+  box-sizing: border-box;
+}
+.team1::before {
+  position: absolute;
+  background: #0d0f13;
+  content: "";
+  left: -12%;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  transform: skew(-15deg);
+}
+
+.teamDetalle {
+  position: relative;
+  z-index: 2;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.teamImg {
+  width: 90px;
+  max-width: 100%;
+  height: 90px;
+  vertical-align: middle;
+  border-style: none;
+  text-align: center !important;
+}
+
+h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.jugadores {
+  color: #fff;
+  padding-left: 0;
+  list-style: none;
+  text-align: center !important;
+}
+.jugador {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/* Sección Noticas */
+
+.noticias {
+  padding: 100px 0;
+}
+
+.seccionTitular {
+  margin-bottom: 30px;
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.titular {
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.titular::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #fd680e;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+}
+
+.rowNoticias {
+  margin-right: 0;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.noticiaAnterior {
+  padding-right: 0;
+  padding-left: 0;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  -webkit-box-flex: 0;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+.posteo {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.posteo::before {
+  content: "";
+  width: 0;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s all ease;
+  background-color: #ee1e46;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.imgNoticias {
+  transition: 0.3s all ease;
+  transform: scale(1);
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.textoNoticia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.textoNoticia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s all ease;
+  background: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.tituloNoticia {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+}
+
+.h3Noticia {
+  font-size: 1.17em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  box-sizing: border-box;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Cuando doy distintas medidas para que el contenido se ajuste de acuerdo al width 
+    el contenido toma como referencia el width mas chico y se setea de acuerdo a esas dimensiones */
+
+@media (max-width: 900px) {
+  .container {
+    width: 860px;
+  }
+
+  @media (max-width:660px){
+    .container {
+        width: 620px;
+      }
+}
+@media (max-width: 400px) {
+    .container {
+      max-width: 360px;
+    }
+  }
+
+}
+
+
+
+

@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'PP Pangram Sans';
+}
+
+body{
+    background-color: $black;
+}
+
+section{
+    height: 100vh;
+    padding: 100px 200px;
+
+    &>div>div>h2{
+        position: relative;
+        text-transform: uppercase;
+        font-family: 'PP Pangram Sans';
+        color: white;
+        font-size: 40px;
+
+        &::before{
+            content:" ";
+            padding: 10px;
+            background-color: $orange;
+        }
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Akira Super ;
+}
+
+.btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 800;
+    background: $black;
+    //border:1px solid $light-blue;
+    border:1px solid $black;
+    color: $orange;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 300ms ease-in-out;
+    &:hover{
+        color:$black;
+        background-color: $orange;
+    }
+}
+
+.image-fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: $black; 
+}
+  ::-webkit-scrollbar-thumb {
+    background: $orange; 
+  }
+  
+  

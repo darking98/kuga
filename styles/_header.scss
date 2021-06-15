@@ -1,0 +1,43 @@
+header{
+    width:100%;
+    height: 12vh;
+    position:fixed;
+    z-index: 99;
+    background-color: transparent;
+    transition: 300ms ease-in-out;
+    nav{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            transition: 300ms ease-in-out;
+        }
+
+        .nav-items{
+            height: 100%;
+            display: flex;
+            &__list{
+                display: flex;
+                list-style: none;
+                align-items: center;
+                text-transform: uppercase;
+                li{
+                    padding:0px 20px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    a{
+                        text-decoration: none;
+                        color:white;
+                        transition:300ms ease-in-out;
+                        &:hover{
+                            color:$orange;
+                            opacity:0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

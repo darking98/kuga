@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   font-weight: 800;
   background: #141414;
-  border: 1px solid #141414;
+  border: none;
   color: #FF3B00;
   cursor: pointer;
   text-transform: uppercase;
@@ -48,8 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:hover {
-  color: #141414;
-  background-color: #FF3B00;
+  opacity: 0.85;
 }
 
 .image-fit {
@@ -69,6 +68,18 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb {
   background: #FF3B00;
+}
+
+.active {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.image-active {
+  opacity: 0.5;
 }
 
 header {
@@ -190,6 +201,7 @@ header nav .nav-items__list li a:hover {
 }
 
 .hero__information {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,17 +212,58 @@ header nav .nav-items__list li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero__information h1 {
-  margin-bottom: 50px;
+  -ms-grid-column-align: center;
+      justify-self: center;
   font-size: 80px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: white;
-  -webkit-animation: header 2s ease-in-out;
-          animation: header 2s ease-in-out;
+}
+
+.hero__information p {
+  color: #141414;
+  opacity: 0.9;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero__information .btn {
+  margin-top: 100px;
+}
+
+.hero__information__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 23px;
+  margin-top: 100px;
+}
+
+.hero__information__social i {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  margin-right: 20px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.hero__information__social i:hover {
+  opacity: 0.5;
 }
 
 @-webkit-keyframes redcar {
@@ -452,5 +505,55 @@ header nav .nav-items__list li a:hover {
   font-size: 20px;
   color: #141414;
   opacity: 0.8;
+}
+
+.teams .teams-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.teams .teams-container .teams__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.teams .teams-container .teams__icons img {
+  height: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.teams .teams-container .teams__icons img:hover {
+  opacity: 0.5;
+}
+
+.teams .teams-container__news {
+  padding: 30px;
+}
+
+.teams .teams-container .news-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.teams .teams-container .news-container .news__subtitle {
+  background-color: #FF3B00;
 }
 /*# sourceMappingURL=styles.css.map */

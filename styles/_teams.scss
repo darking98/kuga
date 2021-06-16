@@ -1,0 +1,38 @@
+.teams{
+    .teams-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .teams__icons{
+            display: flex;
+            justify-content: flex-end;
+            img{
+                height: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &__news{
+            //width: 100%;
+            //height: 100%;
+            padding: 30px;
+            &__rocket{
+
+                
+            }
+        }
+        .news-container{
+            display: flex;
+            flex-direction: column;
+
+            .news__subtitle{
+                background-color: $orange;
+            }
+        }
+    }
+}

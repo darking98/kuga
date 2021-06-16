@@ -37,16 +37,17 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     font-weight: 800;
     background: $black;
-    //border:1px solid $light-blue;
-    border:1px solid $black;
+    border: none;
     color: $orange;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 300ms ease-in-out;
     &:hover{
-        color:$black;
-        background-color: $orange;
+        //color:$black;
+        //background-color: $light-blue;
+        opacity: 0.85;
+        //color:$light-blue;
     }
 }
 
@@ -61,10 +62,21 @@ h1,h2,h3,h4,h5,h6{
 }
 
 ::-webkit-scrollbar-track {
-background: $black; 
+    background: $black; 
 }
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: $orange; 
-  }
+}
   
+.active{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+    
+}
+
+.image-active{
+    opacity: 0.5;
+}
   

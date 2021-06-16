@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Kuga Esports</title>
 </head>
 <body>
@@ -12,31 +13,111 @@
         <nav>
             <div class="nav-items">
                 <ul class="nav-items__list">
-                    <li><a href="#">Somos</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Torneos</a></li>
-                    <li><a href="#">Calendario</a></li>
+                    <li><a href="#">Team</a></li>
                 </ul>
             </div>
             <a href="index.html"><img src="./images/logo/kuga letra/Logo Kuga Letra Color.png" alt="" height="100px" id="logo"></a>
             <div class="nav-items">
                 <ul class="nav-items__list">
                     <li><a href="#">Marcas</a></li>
-                    <li><a href="#">Premios</a></li>
+                    <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>                
             </div>
         </nav>
     </header>
     <section class="hero">
-        <div class="hero__images">
+       <!-- <div class="hero__images">
             <img src="./images/hero/red-car.png" alt="" height="600px" class="red-car">
             <img src="./images/hero/ball.png" alt="" height="500px" class="ball">
             <img src="./images/hero/yellow-car.png" alt="" height="500px" class="yellow-car">
             <img src="./images/hero/fortnite.webp" alt="" class="falling-fortnite">
+        </div>
+        -->
         <div class="hero__information">
             <h1>Somos Kuga</h1>
-            <button class="btn">Torneos</button>
+            <!--<p>Somos un equipo de esports destinado a la organizacion de eventos y torneos.</p>-->
+            <button class="btn">Conocenos</button>
+            <div class="hero__information__social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-twitch"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
         </div> 
+    </section>
+    <section class="teams">
+        <div class="teams-container">
+            <div class="teams__header">
+                <h2>Ultimas Noticias</h2>
+            </div>
+            <div class="teams__icons">
+                <img src="/images/icons/rocket.svg" alt="" class="image-active">
+                <img src="/images/icons/fortnite.svg" alt="">
+                <img src="/images/icons/csgo.svg" alt="">
+                <img src="/images/icons/lol.svg" alt="">
+            </div>
+            <div class="teams__container__news">
+                <div class="teams__container__news__rocket active">
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                    <div class="news-container">
+                        <div class="news__image">
+                            <img src="/images/OVERLAY-TWITTER.jpg" alt="" class="image-fit">
+                        </div>
+
+                            <div class="news__subtitle">
+                                <h3>Victoria en el ultimo encuentro de Rocket League</h3>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="sponsors">
         <div class="sponsors-container">
@@ -105,5 +186,6 @@
     </section>
 
     <script src="js/index.js"></script>
+    <script src="js/twitterApi.js"></script>
 </body>
 </html>

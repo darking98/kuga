@@ -2,16 +2,27 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'PP Pangram Sans';
+    font-family: 'Panagram Medium';
+}
+
+@font-face {
+    font-family: 'Panagram Medium' ;
+    src: url('../fonts/PPPangramSans-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../fonts/Akira\ Expanded\ Demo.otf');
 }
 
 body{
-    background-color: $black;
+    background-color: white;
 }
 
 section{
     height: 100vh;
-    padding: 100px 200px;
+    padding: 50px 200px;
+    margin-bottom:7vh;
 
     &>div>div>h2{
         position: relative;
@@ -29,7 +40,7 @@ section{
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family: Akira Super ;
+    font-family: 'Akira' ;
 }
 
 .btn{
@@ -38,7 +49,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 800;
     background: $black;
     border: none;
-    color: $orange;
+    color: white;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;

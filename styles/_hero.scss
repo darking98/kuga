@@ -1,49 +1,15 @@
 
 .hero{
+    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-image:url("../images/kuga1.png");
-    background-position: center center;
+    background-image:url("../images/hero/fondo.webp");
+    background-position:center center;
     background-repeat: no-repeat;
     background-size: cover;
-    &__images{
-
-        img{
-            position: absolute;
-        }
-        .red-car{
-            top:5%;
-            left:-5%;
-            transform: rotate(90deg);
-            animation: redcar 3s ease-in-out;
-        }
-
-        .ball{
-            top:40%;
-            left:10%;
-            animation: ball 3s ease-in-out;
-        }
-
-        .yellow-car{
-            left: 0;
-            bottom:6%;
-            transform: rotate(90deg);
-            animation: yellowcar 2s ease-in-out;
-            
-        }
-
-        .falling-fortnite{
-            left:60%;
-            top:50%;
-            animation: fornite 300ms ease-in-out;
-        }
-    }
-
-    
-
     &__information{
         height: 100%;
         display: flex;
@@ -52,25 +18,53 @@
         justify-content: center;
         //margin-bottom:100px;
         
-        h1{
-            justify-self: center;
-            font-size: 80px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: white;
-            //animation: header 2s ease-in-out;
-        }
-
-        p{
-            color: $black;
-            opacity: 0.9;
-            font-size: 22px;
-            font-weight: 600;
-
-        }
-        .btn{
+        &__text{
             margin-top:100px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            h1,h3{
+                justify-self: center;
+                //letter-spacing: 5px;
+                text-transform: uppercase;
+                color: white;
+            }
 
+            h1{
+                font-size: 80px;
+                letter-spacing: 5px;
+            }
+
+            h3{
+                font-family: 'PP Pangram Sans';
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+
+            p{
+                font-size: 20px;
+                color: white;
+            }
+        }
+        
+        
+
+        &__buttons{
+            display: flex;
+            margin-bottom:-70px;
+            
+            :nth-child(2){
+                background-color:$orange;
+
+            }
+
+            .btn{
+                margin-left:80px;
+                margin-top:100px;
+                
+            }
         }
         &__social{
             display: flex;
@@ -92,70 +86,36 @@
     }
 }
 
-@keyframes redcar{
-    from{
-        opacity: 0;
-        left:-50%
-    }
-    to{
-        left:-5%;
-        opacity: 1;
-    }
-}
 
-@keyframes yellowcar{
-    from{
-        opacity: 0;
-        //bottom:-50%;
-    }
-    to{
-        opacity: 1;
-        //bottom:5%;
-    }
-}
 
-@keyframes ball {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes fornite{
-    from{
-        opacity: 0.4;
-        top:-40%;
-    }
-
-    to{
-        opacity: 1;
-        top:50%;
-    }
-}
-
-@keyframes header {
-    20%{
-        transform: rotate(40deg);
-    }
-    30%{
-        transform: rotate(-20deg);
-    }
-    40%{
-        transform:rotate(10deg);
-    }
-
-    60%{
-        transform:rotate(-15deg);
+.twitter{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $black;
+    padding: 30px;
+    overflow: hidden;
+    i{
+        z-index: 99;
+        color: $twitter;
+        font-size: 50px;;
     }
     
-    80%{
-        transform: rotate(5deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
 
-
+    p{
+        display: inline;
+        color: white;
+        //position: absolute;
+        animation: twitter 12000ms ease-in infinite;
+    }   
 }
+
+@keyframes twitter{
+    from{
+        transform: translateX(250%);
+    }
+    to{
+        transform: translateX(-120%);
+    }
+}
+

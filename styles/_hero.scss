@@ -1,15 +1,11 @@
 
 .hero{
-    height: 90vh;
+    height: 64vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-position:center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     &__background{
         width: 100%;
         height: 100%;
@@ -17,9 +13,7 @@
         right: 0;
         left: 0;
         z-index: -1;
-        img{
-            //opacity: 0.9;
-        }
+        
     }
     &__information{
         height: 100%;
@@ -51,7 +45,6 @@
             h3{
                 font-family: 'PP Pangram Sans';
                 font-size: 20px;
-                letter-spacing: 1px;
             }
 
             p{
@@ -64,11 +57,11 @@
 
         &__buttons{
             display: flex;
-            margin-bottom:-70px;
+            margin-bottom:-120px;
             
             :nth-child(2){
                 background-color:$orange;
-
+                color: white;
             }
 
             .btn{

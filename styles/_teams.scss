@@ -1,17 +1,26 @@
 .teams{
+    background-color: $orange;
     .teams-container{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        grid-row: 50px;
+        .teams__header{
+            grid-column: 1 / span 3;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
         .teams__icons{
+            grid-column: 1 / span 3;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             .image-active{
                 opacity: 1;
             }
 
             img{
-                height: 20px;
+                height: 35px;
                 margin-right: 20px;
                 cursor: pointer;
                 transition: 300ms ease-in-out;
@@ -23,20 +32,28 @@
         }
 
         &__news{
-            //width: 100%;
-            //height: 100%;
-            padding: 30px;
+            grid-column: 1 / span 3;
             &__rocket{
-
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+                grid-auto-flow:  dense;
+                gap: 20px;
+                :first-child{
+                    grid-column:1 / span 2
+                }
+                :last-child{
+                    grid-column-start: span 2;
+                }
                 
             }
         }
         .news-container{
             display: flex;
             flex-direction: column;
-
+            //justify-content: center;
             .news__subtitle{
-                background-color: $orange;
+                display: none;
+                background-color: $black;
             }
         }
     }

@@ -1,21 +1,35 @@
 const header = document.getElementById('header');
-const headerLogo = document.getElementById('logo');
+const navItems = document.getElementById('navItems');
+const body = document.querySelector('body');
 
-/*window.addEventListener('scroll', () => {
+const toggleMenu = (menu) => {
+    navItems.classList.toggle('nav-active');
+    menu.classList.toggle('hamburger__active')
+    body.classList.toggle('menu-overflow')
+
+    if(menu.classList.contains('hamburger__active')){
+      header.style.background = '#141414';
+    }else{
+      header.style.background='transparent';
+    }
+}
+
+
+window.addEventListener('scroll', () => {
+
+  if(navItems.classList.contains('nav-active')){
+    return
+  }else{
     if(window.scrollY >= 75){
-        header.style.background = 'black';
-        header.style.opacity = '0.7';
-        header.style.height = '8vh';
-        headerLogo.style.height="50px";
+      header.style.background = 'rgba(20, 20, 20, 0.9)';
     }else{
         header.style.background = 'transparent';
-        header.style.opacity = '1';
-        header.style.height = '12vh';
-        headerLogo.style.height="100px";
     }
+  }
+    
     
 })
-*/
+
 var countDownDate = new Date("July 28, 2021 20:00:00").getTime();
 
 // Update the count down every 1 second
@@ -33,11 +47,9 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
   document.getElementById("timer").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("timer").innerHTML = "EXPIRED";

@@ -6,13 +6,18 @@
         .teams__icons{
             display: flex;
             justify-content: flex-end;
+            .image-active{
+                opacity: 1;
+            }
+
             img{
                 height: 20px;
                 margin-right: 20px;
                 cursor: pointer;
                 transition: 300ms ease-in-out;
+                opacity: 0.5;
                 &:hover{
-                    opacity: 0.5;
+                    opacity: 1;
                 }
             }
         }

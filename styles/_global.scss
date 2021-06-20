@@ -16,7 +16,9 @@
 }
 
 body{
-    background-color: white;
+    background-color: $black;
+
+    
 }
 
 section{
@@ -55,10 +57,7 @@ h1,h2,h3,h4,h5,h6{
     letter-spacing: 1px;
     transition: 300ms ease-in-out;
     &:hover{
-        //color:$black;
         //background-color: $light-blue;
-        opacity: 0.85;
-        //color:$light-blue;
     }
 }
 
@@ -87,7 +86,6 @@ h1,h2,h3,h4,h5,h6{
     
 }
 
-.image-active{
-    opacity: 0.5;
+.menu-overflow{
+    overflow: hidden;
 }
-  

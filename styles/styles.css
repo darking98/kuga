@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #141414;
 }
 
 section {
@@ -58,10 +58,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: 300ms ease-in-out;
 }
 
-.btn:hover {
-  opacity: 0.85;
-}
-
 .image-fit {
   height: 100%;
   width: 100%;
@@ -89,18 +85,19 @@ h1, h2, h3, h4, h5, h6 {
   gap: 20px;
 }
 
-.image-active {
-  opacity: 0.5;
+.menu-overflow {
+  overflow: hidden;
 }
 
 header {
   width: 100%;
   height: 7vh;
+  position: relative;
   position: fixed;
   z-index: 99;
-  background-color: white;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  padding: 0px 40px;
 }
 
 header nav {
@@ -116,10 +113,11 @@ header nav {
           justify-content: center;
 }
 
-header nav img {
-  margin-left: 40px;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
+@media (max-width: 1000px) {
+  header nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 header nav .nav-items {
@@ -142,6 +140,29 @@ header nav .nav-items__list {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+  header nav .nav-items__list {
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    height: 93vh;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    background-color: #141414;
+    padding: 0px 40px;
+    background-image: url("../images/Logo Relleno Negro.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 header nav .nav-items__list li {
@@ -149,9 +170,17 @@ header nav .nav-items__list li {
   font-weight: 600;
 }
 
+@media (max-width: 1000px) {
+  header nav .nav-items__list li {
+    width: 100%;
+    border-bottom: 1px solid #FF3B00;
+    padding: 0px;
+  }
+}
+
 header nav .nav-items__list li a {
   text-decoration: none;
-  color: #141414;
+  color: white;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
@@ -161,8 +190,63 @@ header nav .nav-items__list li a:hover {
   opacity: 0.8;
 }
 
+@media (max-width: 1000px) {
+  header nav .nav-items__list li a {
+    display: block;
+    color: white;
+    padding: 30px 0px;
+  }
+}
+
+header nav .hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  header nav .hamburger {
+    display: block;
+  }
+}
+
+header nav .hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #FF3B00;
+  margin: 2px 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.nav-active {
+  right: 0% !important;
+}
+
+.hamburger__active :first-child {
+  -webkit-transform: rotate(-45deg) translate(-1px, 2px);
+          transform: rotate(-45deg) translate(-1px, 2px);
+}
+
+.hamburger__active :nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger__active :last-child {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+          transform: rotate(45deg) translate(-5px, -5px);
+}
+
 .hero {
-  height: 50vh;
+  height: 90vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,10 +258,18 @@ header nav .nav-items__list li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  background-image: url("../images/hero/fondo.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .hero__information {
@@ -291,14 +383,14 @@ header nav .nav-items__list li a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-color: #141414;
+  background-color: #00acee;
   padding: 30px;
   overflow: hidden;
 }
 
 .twitter i {
   z-index: 99;
-  color: #00acee;
+  color: white;
   font-size: 50px;
 }
 
@@ -458,16 +550,21 @@ header nav .nav-items__list li a:hover {
           justify-content: flex-end;
 }
 
+.teams .teams-container .teams__icons .image-active {
+  opacity: 1;
+}
+
 .teams .teams-container .teams__icons img {
   height: 20px;
   margin-right: 20px;
   cursor: pointer;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  opacity: 0.5;
 }
 
 .teams .teams-container .teams__icons img:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .teams .teams-container__news {

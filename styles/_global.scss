@@ -11,6 +11,11 @@
 }
 
 @font-face {
+    font-family:'Panagram Bold';
+    src: url('../fonts/PPPangramSans-Bold.otf');
+}
+
+@font-face {
     font-family: 'Akira';
     src: url('../fonts/Akira\ Expanded\ Demo.otf');
 }
@@ -26,6 +31,18 @@ section{
     padding: 100px 200px;
     position: relative;
     z-index: 10;
+
+    @media(max-width:1000px){
+        padding: 100px 20px;
+        height: auto;
+        &>div>h2{
+            font-size: 20px;
+        }
+    
+        &>div>div>h2{
+            font-size: 20px;
+        }
+    }
     &:before{
         content:"";
         position: absolute;
@@ -38,6 +55,7 @@ section{
         border-color:  transparent transparent transparent $black;
         z-index: -1;
     }
+    
     
 
     /*&>div>div>h2{
@@ -59,7 +77,86 @@ section{
 
 
 footer{
-    height: 100vh;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    color: white;
+    margin: 100px 0px;
+    text-align: center;
+    @media(max-width:1000px){
+        display: block;
+        padding: 0px 30px;
+        &>div{
+            margin-bottom:30px;
+        }
+    }
+    .footer-hashtag{
+        grid-column: 1 / span 12;
+        text-align: center;
+        align-self: center;
+        font-size: 30px;
+        letter-spacing: 1px;
+
+        @media(max-width:1000px){
+            font-size: 20px;
+        }
+    }
+    .footer-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row:2 ;
+        grid-column:6 / span  2;
+        align-self: center;
+        img{
+            object-fit: contain;
+        }
+    }
+    .footer-social{
+        display: flex;
+        justify-content: space-around;
+        grid-row: 3;
+        grid-column: 5 / 9;
+        align-self: center;
+
+        a{
+            color: $orange;
+            font-size: 30px;
+        }
+    }
+    .footer-categories{
+        display: flex;
+        justify-content: space-around;
+        grid-row:4;
+        grid-column:4 / 10;
+
+        @media(max-width:1000px){
+            display: block;
+            &>div{
+                margin-top:30px;
+            }
+        }
+
+        h3{
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+        ul{
+            list-style: none;
+
+            li{
+                font-size: 16px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .footer-copyright{
+        grid-row:5;
+        grid-column: 4/10;
+        text-align: center;
+        padding: 20px 0px;
+    }
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Akira' ;
@@ -76,6 +173,11 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 300ms ease-in-out;
+    
+    @media(max-width:1000px){
+        padding: 10px 10px;
+        font-size: 10px;
+    }
     &:hover{
         background-color: $orange;
         color: white;

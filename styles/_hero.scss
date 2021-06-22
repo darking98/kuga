@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+
+
+    
     &__background{
         width: 100%;
         height: 100%;
@@ -21,7 +24,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        //margin-bottom:100px;
         
         &__text{
             margin-top:100px;
@@ -40,6 +42,10 @@
             h1{
                 font-size: 80px;
                 letter-spacing: 5px;
+
+                @media(max-width:1000px){
+                    font-size: 20px;
+                }
             }
 
             h3{
@@ -58,6 +64,10 @@
                 width: 100%;
                 margin-top:100px;
 
+                @media(max-width:1000px){
+                    //flex-direction: column;
+                }
+
                 .timer-container{
                     display: flex;
                     flex-direction: column;
@@ -68,6 +78,16 @@
                         font-size: 50px;
                         color: $orange;
                         margin-bottom: 20px;
+
+                        @media(max-width:1000px){
+                            font-size: 20px;
+                        }
+                    }
+
+                    h3{
+                        @media(max-width:1000px){
+                            font-size: 10px;
+                        }
                     }
                 }
             }
@@ -78,6 +98,10 @@
         &__buttons{
             display: flex;
             margin-bottom:-100px;
+            @media(max-width:1000px){
+                //flex-direction: column;
+                margin-bottom:-10px;
+            }
             
             :nth-child(2){
                 background-color:$orange;
@@ -88,25 +112,13 @@
                 margin-left:80px;
                 margin-top:100px;
                 
-            }
-        }
-        &__social{
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            color: white;
-            font-size: 23px;
-            margin-top: 100px;
-            i{
-                align-self: center;
-                cursor: pointer;
-                margin-right:20px;
-                transition: 300ms ease-in-out;
-                &:hover{
-                    opacity: 0.5;
+                @media(max-width:1000px){
+                    margin-top: 10px;
+                    margin-left: 20px;
                 }
             }
         }
+        
     }
 }
 
@@ -120,6 +132,10 @@
     padding: 30px;
     overflow: hidden;
     margin-top:100px;
+
+    @media(max-width:1000px){
+        padding: 5px;
+    }
     i{
         z-index: 99;
         color: white;
@@ -132,6 +148,10 @@
         color: white;
         //position: absolute;
         animation: twitter 12000ms ease-in infinite;
+
+        @media(max-width:1000px){
+            font-size:10px;
+        }
     }   
 }
 

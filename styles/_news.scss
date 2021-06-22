@@ -12,17 +12,25 @@
         font-size: 30px;
         color:white;
         align-self: center;
+
+        @media(max-width:1000px){
+            margin-bottom:20px;
+        }
     }
 
     &-grid{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 20px;
+
+        @media(max-width:1000px){
+            display: block;
+        }
         &__item{
             color: white;
             display: flex;
             flex-direction: column;
-            box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+            //box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 
             &-image{
                 cursor: pointer;
@@ -30,12 +38,20 @@
             &-text{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
-                background-color: $black;
-                padding: 30px 20px;
+                @media(max-width:1000px){
+                    h3{
+                        font-size: 15px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+
+                    a{
+                        font-size: 12px;
+                    }
+                }
                 h3{
-                    color: $orange;
+                    color: white;
                     letter-spacing: 1px;
                 }
                 a{

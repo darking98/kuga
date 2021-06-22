@@ -599,7 +599,7 @@ header nav .hamburger div {
 }
 
 .twitter i {
-  z-index: 99;
+  z-index: 5;
   color: white;
   font-size: 50px;
 }

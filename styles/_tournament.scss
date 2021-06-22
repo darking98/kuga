@@ -8,11 +8,12 @@
     &:before{
         border-color:  transparent transparent transparent $orange;
     }
-    h2{
+    &-header{
         grid-column: 1 / span 3;
         text-align: center;
         font-size: 30px;
         color:white;
+        align-self: center;
     }
     &-cards{
         display: flex;

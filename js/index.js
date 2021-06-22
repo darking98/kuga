@@ -47,11 +47,50 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+
+  document.getElementById('days-timer').innerHTML = days;
+  document.getElementById('hours-timer').innerHTML = hours;
+  document.getElementById('minutes-timer').innerHTML = minutes;
+  document.getElementById('seconds-timer').innerHTML = seconds;
 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("timer").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+
+const teamsSwitcher = () => {
+  const gamesIcons = document.querySelector('.teams__icons').children;
+  const gamesContainer = document.querySelector('.teams-container__news').children;
+  const arrIcons = [].slice.call(gamesIcons)
+  const arrGames = [].slice.call(gamesContainer)
+
+  arrIcons.forEach(element => {
+
+    element.addEventListener('click', () =>{
+
+      const classes = [...element.classList];
+
+      element.classList.add('games-active');
+
+      arrIcons.forEach(item => {
+        if(item !== element){
+          item.classList.remove('games-active')
+        }
+      })
+
+      arrGames.forEach(game => {
+        if(game.classList.contains(classes[0])){
+          game.classList.remove('games-disabled')
+        }else{
+          game.classList.add('games-disabled')
+        }
+      })
+      
+    })
+  })
+}
+
+teamsSwitcher()

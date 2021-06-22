@@ -1,0 +1,21 @@
+{
+  "name": "kugahtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "twitterApi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node twitterApi.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darking98/kuga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darking98/kuga/issues"
+  },
+  "homepage": "https://github.com/darking98/kuga#readme",
+  "dependencies": {}
+}
